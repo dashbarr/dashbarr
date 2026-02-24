@@ -1,0 +1,6 @@
+name: 🧩 Widget Request
+description: Request support for a new widget.
+title: "feat(widget): WIDGET_NAME"
+labels: ["feature", "widget"]
+body:
+  - type: input

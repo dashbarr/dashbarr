@@ -1,11 +1,31 @@
-name: Integration Request
-description: Request support for a new integration.
-title: "feat: add support for {{integration}}"
+name: 🔌 Integration Request
+description: Request support for a new integration
+title: "feat(integration): INTEGRATION_NAME"
 labels: ["feature", "integration"]
 body:
   - type: input
     attributes:
-      label: "Integration Name"
-      description: "The name of the integration you want to add support for."
+      label: "Integration Website"
+      description: "The official website of the integration you want added to Dashbarr."
+      placeholder: "https://example.com"
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: "Integration Description"
+      description: "A short description of the integration you want added to Dashbarr."
+      placeholder: "A description of the integration."
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: "Are you able and willing to contribute to the integration?"
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "Additional Information"
+      description: "Any other information about the integration you want added to Dashbarr."
