@@ -1,1 +1,1 @@
-export const TIMEZONES = [] as const;
+export const TIMEZONES = Intl.supportedValuesOf("timeZone");
