@@ -1,7 +1,11 @@
 name: 🔌 Integration Request
 description: Request support for a new integration
-title: "feat(integration): INTEGRATION_NAME"
+title: "feat(integrations): "
 labels: ["feature", "integration"]
+projects: ["dashbarr/1"]
+type: feature
+assignees:
+  - "inman-sebastian"
 body:
   - type: input
     attributes:

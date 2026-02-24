@@ -2,5 +2,12 @@ name: 🧩 Widget Request
 description: Request support for a new widget.
 title: "feat(widget): WIDGET_NAME"
 labels: ["feature", "widget"]
+projects: ["dashbarr/1"]
+type: feature
+assignees:
+  - "inman-sebastian"
 body:
-  - type: input
+  - type: textarea
+    attributes:
+      label: "Additional Information"
+      description: "Any other information about the integration you want added to Dashbarr."
