@@ -1,7 +1,7 @@
 name: 🔌 Integration Request
 description: Request support for a new integration
 title: "feat(integrations): "
-labels: ["feature", "integration"]
+labels: ["feature", "integration", "triage"]
 projects: ["dashbarr/1"]
 type: feature
 assignees:
@@ -10,9 +10,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Want to see a new integration added to Dashbarr? We'd love to hear about it!
+        ### Want to see a new integration added to Dashbarr? We'd love to hear about it!
         Please fill out the following information and we'll get back to you as soon as possible.
-        Thanks for your help!
+        Thanks for taking the time to fill out this request! 💖
   - type: input
     id: website
     attributes:
@@ -29,18 +29,8 @@ body:
       placeholder: "A description of the integration."
     validations:
       required: true
-  - type: dropdown
-    id: contribution
-    attributes:
-      label: "Are you able and willing to contribute to the integration?"
-      description: "Please indicate whether you are able and willing to contribute to the integration"
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
   - type: textarea
     id: additional-information
     attributes:
       label: "Additional Information"
-      description: "Any other information about the integration you want added to Dashbarr"
+      description: "Any additional information about the integration you want added to Dashbarr"
