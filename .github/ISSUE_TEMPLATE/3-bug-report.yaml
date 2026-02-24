@@ -1,0 +1,31 @@
+name: 🪲 Bug Report
+description: Report a bug in Dashbarr
+title: "bug: "
+labels: ["bug"]
+projects: ["dashbarr/1"]
+type: bug
+assignees:
+  - "inman-sebastian"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: "Contact Information"
+      description: "How can we get in touch with you if we need more info?"
+      placeholder: "ex. email@example.com"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "Additional Information"
+      description: "Any other information about the bug you want to report"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output
+      render: shell

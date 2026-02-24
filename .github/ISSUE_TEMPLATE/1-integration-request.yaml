@@ -7,29 +7,40 @@ type: feature
 assignees:
   - "inman-sebastian"
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to see a new integration added to Dashbarr? We'd love to hear about it!
+        Please fill out the following information and we'll get back to you as soon as possible.
+        Thanks for your help!
   - type: input
+    id: website
     attributes:
       label: "Integration Website"
-      description: "The official website of the integration you want added to Dashbarr."
-      placeholder: "https://example.com"
+      description: "The official website of the integration you want added to Dashbarr"
+      placeholder: "ex. https://example.com"
     validations:
       required: true
   - type: textarea
+    id: description
     attributes:
       label: "Integration Description"
-      description: "A short description of the integration you want added to Dashbarr."
+      description: "A short description of the integration you want added to Dashbarr"
       placeholder: "A description of the integration."
     validations:
       required: true
   - type: dropdown
+    id: contribution
     attributes:
       label: "Are you able and willing to contribute to the integration?"
+      description: "Please indicate whether you are able and willing to contribute to the integration"
       options:
         - "Yes"
         - "No"
     validations:
       required: true
   - type: textarea
+    id: additional-information
     attributes:
       label: "Additional Information"
-      description: "Any other information about the integration you want added to Dashbarr."
+      description: "Any other information about the integration you want added to Dashbarr"
