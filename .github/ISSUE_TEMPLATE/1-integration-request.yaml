@@ -1,0 +1,11 @@
+name: Integration Request
+description: Request support for a new integration.
+title: "feat: add support for {{integration}}"
+labels: ["feature", "integration"]
+body:
+  - type: input
+    attributes:
+      label: "Integration Name"
+      description: "The name of the integration you want to add support for."
+    validations:
+      required: true
