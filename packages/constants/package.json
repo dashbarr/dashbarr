@@ -1,0 +1,26 @@
+{
+    "name": "@dashbarr/constants",
+    "type": "module",
+    "private": true,
+    "prettier": "@dashbarr/prettier",
+    "exports": {
+        ".": {
+            "import": "./dist/constants.js",
+            "types": "./dist/constants.d.ts"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "dev": "tsc --watch --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@dashbarr/prettier": "workspace:*",
+        "@dashbarr/typescript": "workspace:*",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "@dashbarr/themes",
+    "type": "module",
+    "prettier": "@dashbarr/prettier",
+    "files": [
+        "dist/**/*"
+    ],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "postcss ./src --dir ./dist",
+        "clean": "rm -rf .turbo dist node_modules",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dashbarr/plugin": "workspace:*"
+    },
+    "devDependencies": {
+        "@dashbarr/postcss": "workspace:*",
+        "@dashbarr/prettier": "workspace:*",
+        "@tailwindcss/postcss": "^4.2.1",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "prettier": "^3.8.1",
+        "tailwindcss": "^4.2.1",
+        "typescript": "^5.9.3"
+    }
+}

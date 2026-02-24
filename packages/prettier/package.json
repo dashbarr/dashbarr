@@ -1,0 +1,23 @@
+{
+    "name": "@dashbarr/prettier",
+    "type": "module",
+    "private": true,
+    "main": "./dist/prettier.config.js",
+    "types": "./dist/prettier.config.d.ts",
+    "prettier": "@dashbarr/prettier",
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "dev": "tsc --watch --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@dashbarr/typescript": "workspace:*",
+        "prettier": "^3.8.1",
+        "prettier-plugin-organize-imports": "^4.3.0",
+        "prettier-plugin-tailwindcss": "^0.7.2",
+        "typescript": "^5.9.3"
+    }
+}

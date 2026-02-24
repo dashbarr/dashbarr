@@ -1,0 +1,17 @@
+/*! Dracula Theme */
+
+@import "tailwindcss";
+@source "@dashbarr/plugin/theme";
+
+@theme static {
+    --color-background: #282a36;
+    --color-foreground: #f8f8f2;
+
+    --color-red: #ff5555;
+    --color-orange: #ffb86c;
+    --color-yellow: #f1fa8c;
+    --color-green: #50fa7b;
+    --color-cyan: #8be9fd;
+    --color-purple: #bd93f9;
+    --color-pink: #ff79c6;
+}

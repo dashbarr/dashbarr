@@ -1,0 +1,47 @@
+{
+    "name": "@dashbarr/plugin",
+    "type": "module",
+    "prettier": "@dashbarr/prettier",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./integration": {
+            "import": "./dist/integration/integration.js",
+            "types": "./dist/integration/integration.d.ts"
+        },
+        "./theme": "./dist/theme/theme.css",
+        "./widget": {
+            "import": "./dist/widget/widget.js",
+            "types": "./dist/widget/widget.d.ts"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build:ts": "tsc --build --declaration --declarationMap",
+        "build:css": "postcss ./src/theme --dir ./dist/theme",
+        "build": "bun run build:ts && bun run build:css",
+        "dev:ts": "tsc --watch --declaration --declarationMap",
+        "dev:css": "postcss ./src/theme --dir ./dist/theme --watch",
+        "dev": "bun run --parallel dev:ts dev:css",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dashbarr/common": "workspace:*",
+        "@dashbarr/constants": "workspace:*"
+    },
+    "devDependencies": {
+        "@dashbarr/postcss": "workspace:*",
+        "@dashbarr/prettier": "workspace:*",
+        "@dashbarr/typescript": "workspace:*",
+        "@tailwindcss/postcss": "^4.2.1",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "prettier": "^3.8.1",
+        "tailwindcss": "^4.2.1",
+        "typescript": "^5.9.3"
+    }
+}

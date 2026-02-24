@@ -1,0 +1,10 @@
+{
+    "extends": "@dashbarr/typescript/base.json",
+    "compilerOptions": {
+        "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}

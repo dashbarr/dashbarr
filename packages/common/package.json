@@ -1,0 +1,51 @@
+{
+    "name": "@dashbarr/common",
+    "type": "module",
+    "prettier": "@dashbarr/prettier",
+    "files": [
+        "dist/**/*"
+    ],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./array": {
+            "import": "./dist/array.js",
+            "types": "./dist/array.d.ts"
+        },
+        "./function": {
+            "import": "./dist/function.js",
+            "types": "./dist/function.d.ts"
+        },
+        "./object": {
+            "import": "./dist/object.js",
+            "types": "./dist/object.d.ts"
+        },
+        "./string": {
+            "import": "./dist/string.js",
+            "types": "./dist/string.d.ts"
+        },
+        "./system": {
+            "import": "./dist/system.js",
+            "types": "./dist/system.d.ts"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dashbarr/prettier": "workspace:*",
+        "prettier": "^3.8.1"
+    },
+    "devDependencies": {
+        "@dashbarr/typescript": "workspace:*",
+        "typescript": "^5.9.3"
+    }
+}

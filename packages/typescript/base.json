@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "ES2024",
+        "lib": ["dom", "dom.iterable", "ES2024"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "Bundler",
+        "resolveJsonModule": true,
+        "allowArbitraryExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "jsx": "preserve",
+        "incremental": true,
+        "noUncheckedIndexedAccess": true,
+        "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "types": ["node", "@dashbarr/typescript"]
+    },
+    "exclude": ["node_modules", "build", "dist", ".next"]
+}

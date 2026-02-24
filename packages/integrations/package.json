@@ -1,0 +1,29 @@
+{
+    "name": "@dashbarr/integrations",
+    "type": "module",
+    "prettier": "@dashbarr/prettier",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "dev": "tsc --watch --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dashbarr/plugin": "workspace:*"
+    },
+    "devDependencies": {
+        "@dashbarr/plugin": "workspace:*",
+        "@dashbarr/prettier": "workspace:*",
+        "@dashbarr/typescript": "workspace:*",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3"
+    }
+}

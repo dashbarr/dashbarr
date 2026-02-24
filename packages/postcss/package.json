@@ -1,0 +1,40 @@
+{
+    "name": "@dashbarr/postcss",
+    "type": "module",
+    "private": true,
+    "prettier": "@dashbarr/prettier",
+    "exports": {
+        ".": {
+            "import": "./dist/postcss.config.js",
+            "types": "./dist/postcss.config.d.ts"
+        },
+        "./strip-tailwindcss-comment": {
+            "require": "./dist/plugins/strip-tailwindcss-comment.js",
+            "import": "./dist/plugins/strip-tailwindcss-comment.js",
+            "types": "./dist/plugins/strip-tailwindcss-comment.d.ts"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "dev": "tsc --watch --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "peerDependencies": {
+        "@tailwindcss/postcss": "^4.2.1",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^4.2.1"
+    },
+    "devDependencies": {
+        "@dashbarr/prettier": "workspace:*",
+        "@dashbarr/typescript": "workspace:*",
+        "@tailwindcss/postcss": "^4.2.1",
+        "postcss": "^8.5.6",
+        "postcss-load-config": "^6.0.1",
+        "prettier": "^3.8.1",
+        "tailwindcss": "^4.2.1",
+        "typescript": "^5.9.3"
+    }
+}

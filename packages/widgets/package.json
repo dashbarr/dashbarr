@@ -1,0 +1,24 @@
+{
+    "name": "@dashbarr/widgets",
+    "type": "module",
+    "private": true,
+    "prettier": "@dashbarr/prettier",
+    "scripts": {
+        "clean": "rm -rf .turbo dist node_modules",
+        "build": "tsc --build --declaration --declarationMap",
+        "dev": "tsc --watch --declaration --declarationMap",
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dashbarr/common": "workspace:*",
+        "@dashbarr/plugin": "workspace:*"
+    },
+    "devDependencies": {
+        "@dashbarr/prettier": "workspace:*",
+        "@dashbarr/typescript": "workspace:*",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3"
+    }
+}

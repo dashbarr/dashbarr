@@ -1,0 +1,23 @@
+{
+    "npm.packageManager": "bun",
+    "npm.scriptRunner": "bun",
+    "editor.rulers": [{ "column": 120, "color": "#ffffff10" }],
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.turbo": true,
+        "**/.cache": true,
+        "**/.next": true,
+        "**/dist": true,
+        "**/build": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": "packages/prettier/src/prettier.config.ts",
+    "tailwindCSS.experimental.configFile": "packages/plugin/src/theme/theme.css",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": { "source.organizeImports": "never" },
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" }
+}

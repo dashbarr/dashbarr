@@ -1,0 +1,26 @@
+node_modules
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build files
+dist
+build
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# Turbo
+.turbo
+
+# Database files
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db

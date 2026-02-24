@@ -1,0 +1,38 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dashbarr: Create Plugin",
+            "type": "shell",
+            "command": "bun run generate:${input:pluginType} --name=${input:pluginName}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "pluginType",
+            "type": "pickString",
+            "description": "The type of plugin to create",
+            "options": [
+                {
+                    "value": "integration",
+                    "label": ""
+                },
+                {
+                    "value": "theme",
+                    "label": ""
+                },
+                {
+                    "value": "widget",
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "id": "pluginName",
+            "type": "promptString",
+            "description": "The name of the plugin"
+        }
+    ]
+}
